@@ -16,6 +16,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/posts">Posts</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/steam">Steam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/payment">Payment</a>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
