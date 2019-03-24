@@ -3226,47 +3226,6 @@
             "time": "2018-07-29T20:33:41+00:00"
         },
         {
-            "name": "xpaw/steamid",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/xPaw/SteamID.php.git",
-                "reference": "993d544bcbe3154edfb20a0480bf3beddc315a60"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/xPaw/SteamID.php/zipball/993d544bcbe3154edfb20a0480bf3beddc315a60",
-                "reference": "993d544bcbe3154edfb20a0480bf3beddc315a60",
-                "shasum": ""
-            },
-            "require": {
-                "ext-gmp": "*",
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master",
-                "phpunit/phpunit": "4.7.x-dev"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "SteamID.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pavel Djundik",
-                    "email": "steamid.php@xpaw.me"
-                }
-            ],
-            "description": "SteamID conversion library",
-            "time": "2018-10-26T12:09:41+00:00"
-        },
-        {
             "name": "zendframework/zend-diactoros",
             "version": "1.8.6",
             "source": {
