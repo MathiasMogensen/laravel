@@ -20,7 +20,7 @@ class PagesController extends Controller
 
     public function steam() {
             $message = "";
-            $openid = new LightOpenID('localhost.trukslaravel');
+            $openid = new LightOpenID('104.248.22.220');
             
             if(!$openid->mode) {
                 $openid->identity = 'https://steamcommunity.com/openid';
