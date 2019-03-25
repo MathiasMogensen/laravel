@@ -76,9 +76,8 @@ class PagesController extends Controller
         // Or if you want to create sandbox payment (for testing only)
         $response = $payment->test()->createOrder($orderId, $extras);
 
-        // Check if successful
         if ($response['success']) {
-            header('Location: '.$response['url']); // redirect
+            $response['message'] = "Success";
         }
 
         return view('pages.payment')->with('message', $response['message']);
