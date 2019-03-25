@@ -19,6 +19,8 @@ Route::get('/steam/login', 'PagesController@steam');
 Route::get('/steam/logout', 'PagesController@steamLogout');
 
 Route::get('/payment', 'PagesController@payment');
+Route::get('/payment2', 'PagesController@payment2');
+Route::get('/payment2/pay', 'PagesController@pay');
 
 // Route::get('/users/{id}-{name}', function ($id, $name) {
 //     return "".$id." ".$name;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dea9c187e63c2858deded1727047ba8",
+    "content-hash": "ac2263d153862c2b621c2f80d8d5c83f",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -636,6 +636,68 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "kanalumaddela/laravel-steam-login",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kanalumaddela/laravel-steam-login.git",
+                "reference": "65d9fbb2ecbb38c058a1b020c0335ce5c68827ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kanalumaddela/laravel-steam-login/zipball/65d9fbb2ecbb38c058a1b020c0335ce5c68827ef",
+                "reference": "65d9fbb2ecbb38c058a1b020c0335ce5c68827ef",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
+                "guzzlehttp/guzzle": "^6.3",
+                "illuminate/container": "^5.6",
+                "illuminate/http": "^5.6",
+                "illuminate/routing": "^5.6",
+                "illuminate/support": "^5.6",
+                "php": "^7.1",
+                "xpaw/steamid": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "kanalumaddela\\LaravelSteamLogin\\SteamLoginServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kanalumaddela\\LaravelSteamLogin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Maddela",
+                    "email": "github@maddela.org",
+                    "homepage": "https://www.maddela.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Steam Login package for Laravel 5.5+",
+            "keywords": [
+                "Authentication",
+                "OpenId",
+                "auth",
+                "laravel",
+                "login",
+                "steam"
+            ],
+            "time": "2019-03-03T18:54:50+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3122,6 +3184,46 @@
             "time": "2017-11-27T11:13:29+00:00"
         },
         {
+            "name": "tuks128/g2a-pay-php5-api",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tuks128/G2A-PAY-PHP5-API.git",
+                "reference": "5a831d7257f6c107d829618300f983828f7709c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tuks128/G2A-PAY-PHP5-API/zipball/5a831d7257f6c107d829618300f983828f7709c5",
+                "reference": "5a831d7257f6c107d829618300f983828f7709c5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": []
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Liprt",
+                    "email": "tuxxx128@protonmail.com"
+                }
+            ],
+            "time": "2018-07-30T09:35:24+00:00"
+        },
+        {
             "name": "unisharp/laravel-ckeditor",
             "version": "4.7.2",
             "source": {
@@ -3224,6 +3326,47 @@
                 "environment"
             ],
             "time": "2018-07-29T20:33:41+00:00"
+        },
+        {
+            "name": "xpaw/steamid",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xPaw/SteamID.php.git",
+                "reference": "993d544bcbe3154edfb20a0480bf3beddc315a60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xPaw/SteamID.php/zipball/993d544bcbe3154edfb20a0480bf3beddc315a60",
+                "reference": "993d544bcbe3154edfb20a0480bf3beddc315a60",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "phpunit/phpunit": "4.7.x-dev"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "SteamID.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pavel Djundik",
+                    "email": "steamid.php@xpaw.me"
+                }
+            ],
+            "description": "SteamID conversion library",
+            "time": "2018-10-26T12:09:41+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",

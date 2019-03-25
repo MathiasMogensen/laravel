@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Classes\LightOpenID;
 use App\Classes\G2APay;
+use Tuxxx128\G2aPay\G2aPayApi;
+use Tuxxx128\G2aPay\G2aPayItem;
 
 class PagesController extends Controller
 {
@@ -18,6 +20,29 @@ class PagesController extends Controller
         );
         return view('pages.about')->with($data);
     }
+    public function payment2 () {
+
+        return view('pages.payment2')->with('message', 'hello');
+
+    }
+    public function pay() {
+        $g2aPayApi = new G2aPayApi('e2ce9d93-58b7-4ce3-8d4b-f51c3b069ce7', '5g80jVlviC7Fb8*T_mQ^7~5QQNUMvbc-5j-o2YXjkfz9mxcbX=Yeud~8-MUjy@W+', false, 'mathiasmg1@gmail.com');
+
+        $item = (new G2aPayItem)->itemTemplate();
+
+        $item->name = "My item";
+        $item->url = "http://bigboytruks.com/product";
+        $item->price = 10; // default currency is 'EUR'
+
+        $g2aPayApi->addItem($item);
+
+        $g2aPayApi->setUrlFail("http://bigboytruks.com/fail");
+        $g2aPayApi->setUrlSuccess("http://bigboytruks.com/success");
+        $g2aPayApi->setOrderId(1);
+        // $g2aPayApi->setEmail('user@server.tld');
+        header('Location: '.$g2aPayApi->getRedirectUrlOnGateway());
+    }
+
     public function payment() {
         // Set required variables
         $success = 'http://bigboytruks.com/success/'; // URL for successful callback;
