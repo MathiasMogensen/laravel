@@ -20,26 +20,23 @@ class PagesController extends Controller
     }
     public function payment() {
         // Set required variables
-        $hash = 'e2ce9d93-58b7-4ce3-8d4b-f51c3b069ce7'; // Get it from G2APay
-        $secret = '5g80jVlviC7Fb8*T_mQ^7~5QQNUMvbc-5j-o2YXjkfz9mxcbX=Yeud~8-MUjy@W+'; // Get it from G2APay
-        $email = 'mathiasmg1@gmail.com'; // Your G2APay store email
-        $success = 'http://example.com/success/'; // URL for successful callback;
-        $fail = 'http://example.com/failed/'; // URL for failed callback;
+        $success = 'http://bigboytruks.com/success/'; // URL for successful callback;
+        $fail = 'http://bigboytruks.com/failed/'; // URL for failed callback;
         $order = 2234; // Choose your order id or invoice number, can be anything
 
         // Optional
         $currency = 'USD'; // Pass currency, if no given will use "USD"
 
         // Create payment instance
-        $payment = new G2APay($hash, $secret, $email, $success, $fail, $order, $currency);
+        $payment = new G2APay($success, $fail, $order, $currency);
 
         // Set item parameters
         $sku = 1; // Item number (In most cases $sku can be same as $id)
         $name = 'My Game';
         $quantity = 1; // Must be integer
         $id = 1; // Your items' identifier
-        $price = 9.95; // Must be float
-        $url = 'http://example.com/my-game/';
+        $price = 9; // Must be float
+        $url = 'http://bigboytruks.com/my-game/';
 
         // Optional
         $extra = '';

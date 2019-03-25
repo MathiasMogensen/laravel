@@ -12,6 +12,9 @@ class G2APay
 	const API_TEST_URL = 'https://checkout.test.pay.g2a.com';
 	const REST_API_URL = 'https://www.pay.g2a.com';
 	const REST_API_TEST_URL = 'https://www.test.pay.g2a.com';
+	const API_HASH = 'e2ce9d93-58b7-4ce3-8d4b-f51c3b069ce7';
+	const API_SECRET = '5g80jVlviC7Fb8*T_mQ^7~5QQNUMvbc-5j-o2YXjkfz9mxcbX=Yeud~8-MUjy@W+';
+	const API_EMAIL = 'mathiasmg1@gmail.com';
 	const CURRENCY_USD = 'USD';
 	const CURRENCY_EUR = 'EUR';
 	private $apiUrl;
@@ -23,13 +26,13 @@ class G2APay
 	private $urlFail;
 	private $currency;
 	private $items = [];
-	public function __construct(string $apiHash, string $apiSecret, string $apiEmail, string $urlSuccess = '', string $urlFail = '', string $currency = 'USD')
+	public function __construct(string $apiEmail, string $urlSuccess = '', string $urlFail = '', string $currency = 'USD')
 	{
 		$this->apiUrl = self::API_URL;
 		$this->restApiUrl = self::REST_API_URL;
-		$this->apiHash = $apiHash;
-		$this->apiEmail = $apiEmail;
-		$this->apiSecret = $apiSecret;
+		$this->apiHash = self::API_HASH;
+		$this->apiEmail = self::API_EMAIL;
+		$this->apiSecret = self::API_SECRET;
 		$this->urlSuccess = $urlSuccess;
 		$this->urlFail = $urlFail;
 		$this->currency = $currency;

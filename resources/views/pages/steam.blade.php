@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('pageTitle', 'About')
+@section('pageTitle', 'Steam')
 
 @section('content')
 
