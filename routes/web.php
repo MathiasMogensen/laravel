@@ -30,7 +30,7 @@ Route::get('/payment2', 'PagesController@payment2');
 Route::get('/payment2/pay', 'PagesController@pay');
 
 // Can be used with php artisan make:controller PhotoController --resource
-Route::resource('cms/posts', 'PostsController');
+Route::resource('posts', 'PostsController');
 
 Auth::routes();
 
