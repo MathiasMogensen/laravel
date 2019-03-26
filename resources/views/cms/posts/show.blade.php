@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <a href="/posts" class="btn btn-primary">Back</a>
+    <a href="/cms/posts" class="btn btn-primary">Back</a>
     <br><br>
 
     @if(!empty($post))
@@ -20,7 +20,7 @@
 
         @auth
             @if(Auth::user()->id == $post->user_id)
-                <a href="/posts/{{$post->id}}/edit" class="btn btn-secondary">Edit</a>
+                <a href="/cms/posts/{{$post->id}}/edit" class="btn btn-secondary">Edit</a>
 
                 {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right'])!!}
                     {{Form::hidden('_method', 'DELETE')}}

@@ -39,7 +39,7 @@ class PostsController extends Controller
         $data = [
             'posts' => Post::orderBy('created_at', 'desc')->paginate(10)
         ];
-        return view('pages.posts.index')->with($data);
+        return view('cms.posts.index')->with($data);
     }
 
     /**
@@ -49,7 +49,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('pages.posts.create');
+        return view('cms.posts.create');
+        return view('cms.posts.create');
     }
 
     /**
@@ -90,7 +91,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Created');
+        return redirect('/cms/posts')->with('success', 'Post Created');
     }
 
     /**
@@ -104,7 +105,7 @@ class PostsController extends Controller
         $data = [
             'post' => Post::find($id)
         ];
-        return view('pages.posts.show')->with($data);
+        return view('cms.posts.show')->with($data);
     }
 
     /**
@@ -125,7 +126,7 @@ class PostsController extends Controller
             return redirect('/posts')->with('error', 'You do not have permission for that');
         }
 
-        return view('pages.posts.edit')->with($data);
+        return view('cms.posts.edit')->with($data);
     }
 
     /**
@@ -165,7 +166,7 @@ class PostsController extends Controller
         }
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Updated');
+        return redirect('/cms/posts')->with('success', 'Post Updated');
     }
 
     /**
@@ -180,7 +181,7 @@ class PostsController extends Controller
 
         // Check if correct user
         if (auth()->user()->id !== $post->user_id) {
-            return redirect('/posts')->with('error', 'You do not have permission for that');
+            return redirect('/cms/posts')->with('error', 'You do not have permission for that');
         }
 
         if($post->cover_image !== "placeholder.png"){
@@ -190,6 +191,6 @@ class PostsController extends Controller
 
         $post->delete();
 
-        return redirect('/posts')->with('success', 'Post Deleted');
+        return redirect('/cms/posts')->with('success', 'Post Deleted');
     }
 }

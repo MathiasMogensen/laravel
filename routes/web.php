@@ -14,8 +14,8 @@
 Route::get('/', 'PagesController@index');
 
 Route::get('/about', 'PagesController@about');
-Route::get('/steam', 'PagesController@steamShow');
-Route::get('/steam/login', 'PagesController@steam');
+Route::view('/steam', 'pages.steam');
+Route::get('/steam/login', 'PagesController@steamAuth');
 Route::get('/steam/logout', 'PagesController@steamLogout');
 
 Route::get('/payment', 'PagesController@payment');
@@ -27,8 +27,10 @@ Route::get('/payment2/pay', 'PagesController@pay');
 // });
 
 // Auto routes for resource controller
-Route::resource('posts', 'PostsController');
+Route::resource('cms/posts', 'PostsController');
 
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+
+Route::view('/cms/test', 'cms.test');
